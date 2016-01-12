@@ -52,6 +52,7 @@
     <Compile Include="ComputerSelect.Designer.cs">
       <DependentUpon>ComputerSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalNetWork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartProgram.cs">
