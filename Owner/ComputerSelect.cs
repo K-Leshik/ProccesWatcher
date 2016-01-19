@@ -12,16 +12,25 @@ namespace Owner
 {
     public partial class frmComputerSelect : Form
     {
-        public frmComputerSelect()
+        public frmComputerSelect(List<string> computer_list)
         {
             InitializeComponent();
-
-            IEnumerable<string> list = LocalNetWork.GetServerList();
-
-            foreach (string s in list)
+          
+            foreach (string s in computer_list)
             {
-                cbComputers.Items.Add(LocalNetWork.GetIPByHostName(s));
+                cbComputers.Items.Add(s + " (" + LocalNetWork.GetIPByHostName(s) + ")");
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

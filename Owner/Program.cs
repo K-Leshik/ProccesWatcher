@@ -15,7 +15,7 @@ namespace Owner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmComputerSelect());
+            Application.Run(new frmProccessInfo("1"));
         }
     }
 }

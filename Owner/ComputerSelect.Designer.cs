@@ -50,6 +50,7 @@
             this.btnOk.TabIndex = 1;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnExit
             // 
@@ -59,6 +60,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Выйти";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblText
             // 
@@ -66,7 +68,7 @@
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(194, 37);
             this.lblText.TabIndex = 3;
-            this.lblText.Text = "Выберите компьютер, информацию о котором хотите посмотреть";
+            this.lblText.Text = "Выберите компьютер, информацию о котором вы хотите посмотреть";
             // 
             // frmComputerSelect
             // 

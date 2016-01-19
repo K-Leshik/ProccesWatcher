@@ -1,6 +1,6 @@
 ﻿namespace Owner
 {
-    partial class StartProgram
+    partial class frmStartProgram
     {
         /// <summary>
         /// Required designer variable.
@@ -60,6 +60,7 @@
             this.Name = "StartProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartProgram";
+            this.Load += new System.EventHandler(this.StartProgram_Load);
             this.ResumeLayout(false);
 
         }
