@@ -7,9 +7,10 @@ using System.IO;
 
 namespace ProccesDataManager
 {
-    class ProccesDataManager : IProccesDataManager
+    public class ProccesDataManager : IProccesDataManager
     {
         static private IProccesDataManager instance = null;
+        static private string current_file_name = null;
         private const string dir_path = @"\ProcW";
         private string full_dir_path;
 
@@ -72,12 +73,41 @@ namespace ProccesDataManager
 
         public void WriteBeginProcces(int pid, string name, DateTime date)
         {
-            throw new NotImplementedException();
+            WriteProcces(pid, name, date, false);
         }
 
         public void WriteEndProcces(int pid, string name, DateTime date)
         {
-            throw new NotImplementedException();
+            WriteProcces(pid, name, date, true);
+        }
+
+        //
+        // Auxilary function, that find a name of the last file and append information 
+        // about procces
+        //
+        private void WriteProcces(int pid, string name, DateTime date, bool is_end)
+        {
+            if (current_file_name == null)
+            {
+                DirectoryInfo dir_info = new DirectoryInfo(full_dir_path);
+                FileInfo last_file = null;
+                foreach (FileInfo fi in dir_info.GetFiles())
+                {
+                    if (last_file == null || last_file.LastWriteTime <= fi.LastWriteTime)
+                    {
+                        last_file = fi;
+                    }
+                }
+                current_file_name = last_file.FullName;
+            }
+
+            using (BinaryWriter writer = new BinaryWriter(new FileStream(current_file_name, FileMode.Append, FileAccess.Write)))
+            {
+                writer.Write(pid);
+                writer.Write(name);
+                writer.Write(date.Ticks);
+                writer.Write(is_end);
+            }
         }
     }
 }
