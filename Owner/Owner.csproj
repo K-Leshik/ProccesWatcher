@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ACommand.cs" />
+    <Compile Include="Commands\GetProccessCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
     <Compile Include="ComputerSelect.cs">
       <SubType>Form</SubType>
     </Compile>

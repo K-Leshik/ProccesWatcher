@@ -36,37 +36,41 @@
             // 
             // cbComputers
             // 
+            this.cbComputers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbComputers.FormattingEnabled = true;
             this.cbComputers.Location = new System.Drawing.Point(20, 66);
             this.cbComputers.Name = "cbComputers";
-            this.cbComputers.Size = new System.Drawing.Size(194, 21);
+            this.cbComputers.Size = new System.Drawing.Size(242, 24);
             this.cbComputers.TabIndex = 0;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(58, 112);
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnOk.Location = new System.Drawing.Point(56, 108);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.Size = new System.Drawing.Size(100, 26);
             this.btnOk.TabIndex = 1;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "Ок";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(139, 112);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(162, 108);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(100, 26);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Выйти";
+            this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblText
             // 
-            this.lblText.Location = new System.Drawing.Point(20, 26);
+            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblText.Location = new System.Drawing.Point(20, 21);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(194, 37);
+            this.lblText.Size = new System.Drawing.Size(242, 42);
             this.lblText.TabIndex = 3;
             this.lblText.Text = "Выберите компьютер, информацию о котором вы хотите посмотреть";
             // 
@@ -74,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 151);
+            this.ClientSize = new System.Drawing.Size(285, 154);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOk);

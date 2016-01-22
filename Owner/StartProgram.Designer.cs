@@ -30,16 +30,17 @@
         {
             this.lblStatusText = new System.Windows.Forms.Label();
             this.pbStatus = new System.Windows.Forms.ProgressBar();
+            this.lblCurrentComp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblStatusText
             // 
-            this.lblStatusText.Location = new System.Drawing.Point(12, 9);
+            this.lblStatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStatusText.Location = new System.Drawing.Point(12, 26);
             this.lblStatusText.Name = "lblStatusText";
-            this.lblStatusText.Size = new System.Drawing.Size(338, 45);
+            this.lblStatusText.Size = new System.Drawing.Size(73, 28);
             this.lblStatusText.TabIndex = 0;
-            this.lblStatusText.Text = "Загрузка";
-            this.lblStatusText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblStatusText.Text = "Загрузка:";
             // 
             // pbStatus
             // 
@@ -49,15 +50,25 @@
             this.pbStatus.Step = 100;
             this.pbStatus.TabIndex = 1;
             // 
-            // StartProgram
+            // lblCurrentComp
+            // 
+            this.lblCurrentComp.AutoEllipsis = true;
+            this.lblCurrentComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCurrentComp.Location = new System.Drawing.Point(85, 26);
+            this.lblCurrentComp.Name = "lblCurrentComp";
+            this.lblCurrentComp.Size = new System.Drawing.Size(265, 28);
+            this.lblCurrentComp.TabIndex = 0;
+            // 
+            // frmStartProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 95);
             this.Controls.Add(this.pbStatus);
+            this.Controls.Add(this.lblCurrentComp);
             this.Controls.Add(this.lblStatusText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StartProgram";
+            this.Name = "frmStartProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartProgram";
             this.Load += new System.EventHandler(this.StartProgram_Load);
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.Label lblStatusText;
         private System.Windows.Forms.ProgressBar pbStatus;
+        private System.Windows.Forms.Label lblCurrentComp;
     }
 }

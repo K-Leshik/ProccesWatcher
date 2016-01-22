@@ -22,8 +22,8 @@ namespace Owner
         private void StartProgram_Load(object sender, EventArgs e)
         {
             List<string> host_list = LocalNetWork.GetServerList();
-            List<string> available_host_list = new List<string>();
-
+            List<string> available_host_list = host_list;// new List<string>();
+            /*
             if (host_list.Count() <= 1)
             {
                 MessageBox.Show("В локальной сети не обнаружено ни одного компьютера", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -39,6 +39,7 @@ namespace Owner
 
             for (int i = 0; i < host_list.Count(); i++)
             {
+                lblCurrentComp.Text = host_list[i];
                 string host = host_list.ElementAt(i);
 
                 using (TcpClient client = new TcpClient(AddressFamily.InterNetwork))
@@ -75,18 +76,21 @@ namespace Owner
                 }
 
                 pbStatus.Value = (i + 1) / (host_list.Count());
-            }
+            }*/
 
             if (available_host_list.Count() <= 0)
             {
-                MessageBox.Show("В локальной сети не обнаружено ни одного компьютера", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("В локальной сети не обнаружено ни одного компьютера с установленным драйвером", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
                 return;
             }
 
+            this.Hide();
+            using (Form computer_select_form = new frmComputerSelect(available_host_list))
+            {
+                computer_select_form.ShowDialog();
+            }
             this.Close();
-            Form computer_select_form = new frmComputerSelect(available_host_list);
-            computer_select_form.Show();
         }
     }
 }
